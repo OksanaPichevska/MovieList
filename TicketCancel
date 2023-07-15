@@ -1,0 +1,12 @@
+// Функція для відміни квитка
+    static void CancelTicket()
+    {
+        if (bookedTickets.Count == 0)
+        {
+            Console.WriteLine("У вас немає заброньованих квитків.");
+            return;
+        }
+
+        Console.WriteLine("Заброньовані квитки:");
+        int ticketNumber = 1;
+        Dictionary<int, Tuple<string, string, int>> ticketDictionary = new Dictionary<int, Tuple<string, string, int>>();
